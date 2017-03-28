@@ -1,7 +1,7 @@
 <p align="center"><img src="https://phpmap.co/images/logo_big.png" style="max-width: 300px;"></p>
 
 <p align="center">
-<a href="http://stackshare.io/fwartner/phpmap"><img src="http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat"></a>
+<a href="http://stackshare.io/fwartner/phpmap"><img src="http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat" alt="stackshare.io"></a>
 <a href="https://scrutinizer-ci.com/g/PHPMap/phpmap?branch=master"><img src="https://img.shields.io/scrutinizer/g/phpmap/phpmap.svg?style=flat-square"></a>
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
