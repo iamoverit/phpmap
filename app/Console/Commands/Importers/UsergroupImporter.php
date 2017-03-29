@@ -59,28 +59,6 @@ class UsergroupImporter extends Command
                 'country' => $usergroup->country,
                 'slug' => str_slug($usergroup->name, '_'),
             ]);
-
-            foreach ($usergroup->contacts as $contact) {
-                $localContact = new UsergroupContact();
-
-                $localContact->create([
-                    'usergroup_id' => $usergroup->id,
-                    'url' => $contact->url,
-                    'name' => $contact->name,
-                    'type' => $contact->type,
-                    'icon' => $contact->cssClass,
-                ]);
-            }
-
-            foreach ($usergroup->tags as $tag) {
-                $localTag = new UsergroupTag();
-
-                $localTag->create([
-                    'usergroup_id' => $usergroup->id,
-                    'name' => $tag->name,
-                    'description' => $tag->description,
-                ]);
-            }
         }
     }
 }

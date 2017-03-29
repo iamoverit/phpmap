@@ -22,14 +22,4 @@ class Usergroup extends Model
     {
         return 'usergroups';
     }
-
-    public function contacts()
-    {
-        return $this->hasMany(UsergroupContact::class);
-    }
-
-    public function tags()
-    {
-        return $this->hasMany(UsergroupTag::class);
-    }
 }

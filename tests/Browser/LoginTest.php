@@ -18,17 +18,17 @@ class LoginTest extends DuskTestCase
     public function testLogin()
     {
         $user = factory(User::class)->create([
-            'username' => 'taylorotwell',
-            'email' => 'taylor@laravel.com',
-            'password' => bcrypt('laravel123'),
+            'username' => 'johndoe',
+            'email' => 'johndoe@example.com',
+            'password' => bcrypt('phpmap123'),
         ]);
 
         $this->browse(function ($browser) {
             $browser->visit('/login')
-                ->type('email', 'taylor@laravel.com')
-                ->type('password', 'laravel123')
+                ->type('email', 'johndoe@example.com')
+                ->type('password', 'phpmap123')
                 ->press('Login')
-                ->assertPathIs('/@taylorotwell');
+                ->assertPathIs('/@johndoe');
         });
     }
 }

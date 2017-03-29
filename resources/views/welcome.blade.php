@@ -164,7 +164,7 @@
             ]).on('autocomplete:selected', function(event, suggestion, dataset) {
                 console.log(suggestion);
                 if (dataset === 'ug') {
-                    window.location = "/usergroups/" + suggestion.shortname;
+                    window.location = "/ug/" + suggestion.slug;
                 }
 
                 if (dataset === 'users') {

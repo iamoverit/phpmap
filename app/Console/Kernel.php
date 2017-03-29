@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\Importers\MeetupImporter;
 use Illuminate\Console\Scheduling\Schedule;
 use App\Console\Commands\Users\ListAllUsers;
 use App\Console\Commands\Application\InstallApp;
@@ -25,6 +26,7 @@ class Kernel extends ConsoleKernel
         UserImporter::class,
         InstallApp::class,
         UsergroupImporter::class,
+        MeetupImporter::class,
     ];
 
     /**

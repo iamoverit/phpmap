@@ -18,14 +18,14 @@ class RegisterTest extends DuskTestCase
     {
         $this->browse(function ($browser) {
             $browser->visit('/register')
-                ->type('name', 'Taylor Otwell')
-                ->type('username', 'taylorotwell')
+                ->type('name', 'John Doe')
+                ->type('username', 'johndoe')
                 ->type('address', 'Little Rock, Arkansas, Vereinigte Staaten von Amerika')
-                ->type('email', 'taylor@laravel.com')
-                ->type('password', 'laravel123')
-                ->type('password_confirmation', 'laravel123')
+                ->type('email', 'johndoe@example.com')
+                ->type('password', 'phpmap123')
+                ->type('password_confirmation', 'phpmap123')
                 ->press('Register')
-                ->assertPathIs('/@taylorotwell');
+                ->assertPathIs('/@johndoe');
         });
     }
 }
