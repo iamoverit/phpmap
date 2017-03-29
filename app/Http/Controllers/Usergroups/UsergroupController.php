@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers\Usergroups;
 
-use App\Models\Meetups\Usergroup;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Helpers\Meetup;
+use App\Models\Meetups\Usergroup;
+use App\Http\Controllers\Controller;
 
 class UsergroupController extends Controller
 {
     private $meetup;
     private $client;
-    public function __construct(Meetup $meetup) {
-        $this->meetup = new Meetup(array(
+
+    public function __construct(Meetup $meetup)
+    {
+        $this->meetup = new Meetup([
             'key' => env('MEETUP_KEY'),
-        ));
+        ]);
     }
 
     public function showGroup($slug)
@@ -31,6 +32,5 @@ class UsergroupController extends Controller
 
     public function getMeetups()
     {
-        
     }
 }

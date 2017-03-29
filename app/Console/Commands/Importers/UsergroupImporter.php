@@ -4,8 +4,6 @@ namespace App\Console\Commands\Importers;
 
 use Illuminate\Console\Command;
 use App\Models\Meetups\Usergroup;
-use App\Models\Meetups\UsergroupTag;
-use App\Models\Meetups\UsergroupContact;
 
 class UsergroupImporter extends Command
 {

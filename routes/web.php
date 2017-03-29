@@ -38,9 +38,8 @@ Route::get('/usergroups', 'Usergroups\UsergroupController@getGroups');
 
 Route::impersonate();
 
-
-Route::get('/test', function() {
-    $url = "https://api.meetup.com/find/groups?key=1b3430377b18196b6d1fb372d177a77&radius=global&filter=all&sign=true&photo-host=secure&text=php&is_simplehtml=true";
+Route::get('/test', function () {
+    $url = 'https://api.meetup.com/find/groups?key=1b3430377b18196b6d1fb372d177a77&radius=global&filter=all&sign=true&photo-host=secure&text=php&is_simplehtml=true';
     $meetups = json_decode(file_get_contents($url));
 
     foreach ($meetups as $meetup) {
