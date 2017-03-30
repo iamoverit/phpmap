@@ -178,7 +178,6 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         Laravel\Scout\ScoutServiceProvider::class,
         Spatie\Browsershot\BrowsershotServiceProvider::class,
-        PragmaRX\Countries\ServiceProvider::class,
         SocialiteProviders\Manager\ServiceProvider::class,
         Lab404\Impersonate\ImpersonateServiceProvider::class,
         Spatie\ModelCleanup\ModelCleanupServiceProvider::class,
@@ -186,6 +185,7 @@ return [
         Spatie\Referer\RefererServiceProvider::class,
         Spatie\Sitemap\SitemapServiceProvider::class,
         Spatie\Feed\FeedServiceProvider::class,
+        Cog\Ban\Providers\BanServiceProvider::class,
 
     ],
 

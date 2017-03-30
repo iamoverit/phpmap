@@ -4,16 +4,18 @@ namespace App;
 
 use App\Traits\Boardable;
 use App\Traits\HasInvites;
+use Cog\Ban\Traits\HasBans;
 use Laravel\Scout\Searchable;
 use App\Models\Resources\Snippet;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Lab404\Impersonate\Models\Impersonate;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Cog\Ban\Contracts\HasBans as HasBansContract;
 
-class User extends Authenticatable
+class User extends Authenticatable implements HasBansContract
 {
-    use Searchable, Notifiable, HasApiTokens, Impersonate, HasInvites, Boardable;
+    use Searchable, Notifiable, HasApiTokens, Impersonate, HasInvites, Boardable, HasBans;
 
     /**
      * The attributes that are mass assignable.
