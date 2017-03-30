@@ -3,9 +3,9 @@
 namespace App\Models\Meetups;
 
 use Carbon\Carbon;
+use Spatie\Feed\FeedItem;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Feed\FeedItem;
 
 class Usergroup extends Model implements FeedItem
 {
@@ -57,6 +57,6 @@ class Usergroup extends Model implements FeedItem
 
     public function getFeedItems()
     {
-        return Usergroup::all();
+        return self::all();
     }
 }
