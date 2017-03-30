@@ -21,7 +21,6 @@
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
                 <li><a href="/map">Map</a></li>
-                <li><a href="https://discuss.phpmap.co">Forums</a></li>
                 <li><a href="/users">Users</a></li>
                 <li><a href="/usergroups">Usergroups</a></li>
 
