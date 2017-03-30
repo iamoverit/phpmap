@@ -47,7 +47,7 @@ class Usergroup extends Model implements FeedItem
 
     public function getFeedItemLink()
     {
-        return action('App\Http\Controllers\Usergroups\UsergroupController@showGroup', [$this->slug]);
+        return action('Usergroups\UsergroupController@showGroup', [$this->slug]);
     }
 
     public function getFeedItemAuthor()
