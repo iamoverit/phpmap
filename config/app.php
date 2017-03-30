@@ -185,6 +185,7 @@ return [
         Spatie\Activitylog\ActivitylogServiceProvider::class,
         Spatie\Referer\RefererServiceProvider::class,
         Spatie\Sitemap\SitemapServiceProvider::class,
+        Spatie\Feed\FeedServiceProvider::class,
 
     ],
 

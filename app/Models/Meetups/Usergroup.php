@@ -2,10 +2,12 @@
 
 namespace App\Models\Meetups;
 
+use Carbon\Carbon;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Feed\FeedItem;
 
-class Usergroup extends Model
+class Usergroup extends Model implements FeedItem
 {
     use Searchable;
 
@@ -21,5 +23,40 @@ class Usergroup extends Model
     public function searchableAs()
     {
         return 'usergroups';
+    }
+
+    public function getFeedItemId()
+    {
+        return $this->id;
+    }
+
+    public function getFeedItemTitle()
+    {
+        return $this->name;
+    }
+
+    public function getFeedItemUpdated() : Carbon
+    {
+        return $this->updated_at;
+    }
+
+    public function getFeedItemSummary()
+    {
+        return $this->name;
+    }
+
+    public function getFeedItemLink()
+    {
+        return action('App\Http\Controllers\Usergroups\UsergroupController@showGroup', [$this->slug]);
+    }
+
+    public function getFeedItemAuthor()
+    {
+        return 'PHP.ug';
+    }
+
+    public function getFeedItems()
+    {
+        return Usergroup::all();
     }
 }
