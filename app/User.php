@@ -2,10 +2,10 @@
 
 namespace App;
 
-use App\Models\Resources\Snippet;
 use App\Traits\Boardable;
 use App\Traits\HasInvites;
 use Laravel\Scout\Searchable;
+use App\Models\Resources\Snippet;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Lab404\Impersonate\Models\Impersonate;

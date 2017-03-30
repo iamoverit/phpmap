@@ -11,11 +11,11 @@ class Snippet extends Model
     use LogsActivity;
 
     protected $fillable = [
-        'name', 'user_id', 'snippet', 'is_private'
+        'name', 'user_id', 'snippet', 'is_private',
     ];
 
     protected $casts = [
-        'is_private' => 'boolean'
+        'is_private' => 'boolean',
     ];
 
     public function user()
