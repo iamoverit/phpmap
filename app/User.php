@@ -10,8 +10,8 @@ use App\Models\Resources\Snippet;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Lab404\Impersonate\Models\Impersonate;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Cog\Ban\Contracts\HasBans as HasBansContract;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable implements HasBansContract
 {
