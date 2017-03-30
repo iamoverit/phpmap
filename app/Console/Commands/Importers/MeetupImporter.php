@@ -58,7 +58,7 @@ class MeetupImporter extends Command
                 'lon' => $meetup->lon,
                 'member_count' => $meetup->members,
                 'who' => $meetup->who,
-                'timezone' => $meetup->timezone
+                'timezone' => $meetup->timezone,
             ]);
         }
     }
