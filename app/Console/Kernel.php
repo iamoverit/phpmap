@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\Application\GenerateSitemap;
 use App\Console\Commands\Importers\MeetupImporter;
 use Illuminate\Console\Scheduling\Schedule;
 use App\Console\Commands\Users\ListAllUsers;
@@ -27,6 +28,7 @@ class Kernel extends ConsoleKernel
         InstallApp::class,
         UsergroupImporter::class,
         MeetupImporter::class,
+        GenerateSitemap::class,
     ];
 
     /**
@@ -37,8 +39,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        $schedule->command('sitemap:generate')->daily();
     }
 
     /**

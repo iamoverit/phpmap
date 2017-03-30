@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Resources\Snippet;
 use App\Traits\Boardable;
 use App\Traits\HasInvites;
 use Laravel\Scout\Searchable;
@@ -79,5 +80,10 @@ class User extends Authenticatable
         if (! $this->is_admin) {
             return true;
         }
+    }
+
+    public function snippets()
+    {
+        return $this->hasMany(Snippet::class);
     }
 }

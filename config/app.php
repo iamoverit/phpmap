@@ -181,6 +181,10 @@ return [
         PragmaRX\Countries\ServiceProvider::class,
         SocialiteProviders\Manager\ServiceProvider::class,
         Lab404\Impersonate\ImpersonateServiceProvider::class,
+        Spatie\ModelCleanup\ModelCleanupServiceProvider::class,
+        Spatie\Activitylog\ActivitylogServiceProvider::class,
+        Spatie\Referer\RefererServiceProvider::class,
+        Spatie\Sitemap\SitemapServiceProvider::class,
 
     ],
 

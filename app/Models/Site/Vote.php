@@ -5,9 +5,12 @@ namespace App\Models\Site;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class Vote extends Model
 {
+    use LogsActivity;
+
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public function voteable(): MorphTo
