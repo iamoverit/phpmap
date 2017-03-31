@@ -35,3 +35,10 @@ Auth::routes();
 
 Route::impersonate();
 Route::feeds();
+
+Route::group(['prefix' => 'account'], function () {
+    Route::get('/', 'Users\AccountController@getAccount');
+    Route::post('/', 'Users\AccountController@updateAccount');
+
+    Route::post('/', 'Users\AccountController@updateAccount');
+});
