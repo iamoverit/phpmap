@@ -17,6 +17,7 @@ Vue.component('homemap', require('./components/HomeMap.vue'));
 Vue.component('userlist', require('./components/UserList.vue'));
 Vue.component('users', require('./components/Users.vue'));
 Vue.component('usergroups', require('./components/Usergroups.vue'));
+Vue.component('account', require('./components/Account.vue'));
 
 const app = new Vue({
     el: '#app'

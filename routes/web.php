@@ -38,7 +38,6 @@ Route::feeds();
 
 Route::group(['prefix' => 'account'], function () {
     Route::get('/', 'Users\AccountController@getAccount');
-    Route::post('/', 'Users\AccountController@updateAccount');
-
-    Route::post('/', 'Users\AccountController@updateAccount');
+    Route::post('/update', 'Users\AccountController@updateAccount');
+    Route::get('/delete', 'Users\AccountController@deleteAccount');
 });
