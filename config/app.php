@@ -240,7 +240,6 @@ return [
          * Package Aliases...
          */
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
-        'Countries'=> PragmaRX\Countries\Facade::class,
     ],
 
 ];
