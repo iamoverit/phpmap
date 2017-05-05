@@ -2,12 +2,12 @@
 
 namespace App;
 
-use App\Models\Forum\Activity;
-use App\Models\Forum\Thread;
 use App\Traits\Boardable;
 use App\Traits\HasInvites;
 use Cog\Ban\Traits\HasBans;
+use App\Models\Forum\Thread;
 use Laravel\Scout\Searchable;
+use App\Models\Forum\Activity;
 use App\Models\Resources\Snippet;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;

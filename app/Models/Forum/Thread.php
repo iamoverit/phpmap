@@ -2,9 +2,9 @@
 
 namespace App\Models\Forum;
 
-use App\Filters\ThreadFilters;
-use App\RecordsActivity;
 use App\User;
+use App\RecordsActivity;
+use App\Filters\ThreadFilters;
 use Illuminate\Database\Eloquent\Model;
 
 class Thread extends Model
