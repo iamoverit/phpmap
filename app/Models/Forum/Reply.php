@@ -2,9 +2,9 @@
 
 namespace App\Models\Forum;
 
+use App\User;
 use App\Favoritable;
 use App\RecordsActivity;
-use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model
@@ -22,6 +22,7 @@ class Reply extends Model
      * @var array
      */
     protected $with = ['owner', 'favorites'];
+
     /**
      * A reply has an owner.
      *
@@ -31,6 +32,7 @@ class Reply extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
     /**
      * A reply belongs to a thread.
      *
@@ -40,6 +42,7 @@ class Reply extends Model
     {
         return $this->belongsTo(Thread::class);
     }
+
     /**
      * Determine the path to the reply.
      *
@@ -47,6 +50,6 @@ class Reply extends Model
      */
     public function path()
     {
-        return $this->thread->path() . "#reply-{$this->id}";
+        return $this->thread->path()."#reply-{$this->id}";
     }
 }

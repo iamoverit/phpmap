@@ -14,6 +14,7 @@ class Favorite extends Model
      * @var array
      */
     protected $guarded = [];
+
     /**
      * Fetch the model that was favorited.
      *

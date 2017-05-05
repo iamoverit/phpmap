@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
-use App\Models\Forum\Activity;
 use Carbon\Carbon;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
+use App\Models\Forum\Activity;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ActivityTest extends TestCase
 {
@@ -22,7 +22,7 @@ class ActivityTest extends TestCase
             'type' => 'created_thread',
             'user_id' => auth()->id(),
             'subject_id' => $thread->id,
-            'subject_type' => 'App\Thread'
+            'subject_type' => 'App\Thread',
         ]);
 
         $activity = Activity::first();
@@ -31,7 +31,7 @@ class ActivityTest extends TestCase
     }
 
     /** @test */
-    function it_records_activity_when_a_reply_is_created()
+    public function it_records_activity_when_a_reply_is_created()
     {
         $this->signIn();
 
@@ -41,7 +41,7 @@ class ActivityTest extends TestCase
     }
 
     /** @test */
-    function it_fetches_a_feed_for_any_user()
+    public function it_fetches_a_feed_for_any_user()
     {
         $this->signIn();
 
