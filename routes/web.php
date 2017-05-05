@@ -41,3 +41,4 @@ Route::group(['prefix' => 'account'], function () {
     Route::post('/update', 'Users\AccountController@updateAccount');
     Route::get('/delete', 'Users\AccountController@deleteAccount');
 });
+

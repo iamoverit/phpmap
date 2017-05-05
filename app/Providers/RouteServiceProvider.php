@@ -84,4 +84,22 @@ class RouteServiceProvider extends ServiceProvider
             require base_path('routes/public_api.php');
         });
     }
+
+    /**
+     * Define the "forum" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapForumRoutes()
+    {
+        Route::group([
+            'middleware' => 'web',
+            'namespace' => $this->namespace,
+            'prefix' => 'forum',
+        ], function ($router) {
+            require base_path('routes/forum.php');
+        });
+    }
 }
