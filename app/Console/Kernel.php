@@ -5,10 +5,8 @@ namespace App\Console;
 use Illuminate\Console\Scheduling\Schedule;
 use App\Console\Commands\Users\ListAllUsers;
 use App\Console\Commands\Application\InstallApp;
-use App\Console\Commands\Importers\UserImporter;
 use App\Console\Commands\Importers\MeetupImporter;
 use App\Console\Commands\Application\GenerateSitemap;
-use App\Console\Commands\Importers\UsergroupImporter;
 use App\Console\Commands\Users\Address\CheckNoAddress;
 use App\Console\Commands\Users\Referrals\CheckReferrals;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -24,9 +22,7 @@ class Kernel extends ConsoleKernel
         CheckReferrals::class,
         CheckNoAddress::class,
         ListAllUsers::class,
-        UserImporter::class,
         InstallApp::class,
-        UsergroupImporter::class,
         MeetupImporter::class,
         GenerateSitemap::class,
     ];
