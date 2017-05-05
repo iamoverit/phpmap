@@ -70,7 +70,7 @@
 
 
             <div class="col-md-8">
-                <h3>Sponsors & Partners</h3>
+                <h3>Partners</h3>
                 <div class="col-md-3">
                     <a href="https://m.do.co/c/0955426a9bc1"><img src="{{ asset('images/sponsors/do_logo.png') }}" alt="DO Logo" class="img img-responsive"></a>
                 </div>
@@ -94,6 +94,12 @@
                 <div class="col-md-3">
                     <a href="https://php.ug"><img src="{{ asset('images/partners/phpug.png') }}" alt="PHPug Logo" class="img img-responsive"></a>
                 </div>
+            </div>
+
+            <hr>
+
+            <div class="col-md-12">
+                <h3>Sponsors</h3>
             </div>
         </div>
     </div>

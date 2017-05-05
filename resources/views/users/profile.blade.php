@@ -27,12 +27,20 @@
                                 @if($user->is_verified)
                                     <small data-toggle="tooltip" data-placement="left" title="Verified profiles are profiles from official accounts where the ownerships are verified"><strong>Verified</strong> <i class="fa fa-check-circle verified" aria-hidden="true"></i></small>
                                 @endif
+
+                                @if($user->is_sponsor)
+                                    <small><strong data-toggle="tooltip" data-placement="left" title="Sponsors get the sponsor-badge">Sponsor</strong> <i class="fa fa-star gold" aria-hidden="true"></i></small>
+                                @endif
                             </p>
                         @else
                             <p>
                                 <small><strong>User</strong> <i class="fa fa-user-circle" aria-hidden="true"></i></small>
                                 @if($user->is_verified)
                                     <small><strong data-toggle="tooltip" data-placement="left" title="Verified profiles are profiles from official accounts where the ownerships are verified">Verified</strong> <i class="fa fa-check-circle verified" aria-hidden="true"></i></small>
+                                @endif
+
+                                @if($user->is_sponsor)
+                                    <small><strong data-toggle="tooltip" data-placement="left" title="Sponsors get the sponsor-badge">Sponsor</strong> <i class="fa fa-star gold" aria-hidden="true"></i></small>
                                 @endif
                             </p>
                         @endif

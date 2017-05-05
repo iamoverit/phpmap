@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Sites;
 
 use App\Http\Controllers\Controller;
+use App\User;
 
 class SiteController extends Controller
 {
@@ -18,7 +19,9 @@ class SiteController extends Controller
 
     public function getAbout()
     {
-        return view('pages.about');
+        $sponsors = User::where('is_sponsor', 1)->get();
+
+        return view('pages.about', compact('sponsors'));
     }
 
     public function getImprint()
