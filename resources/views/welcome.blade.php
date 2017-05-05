@@ -147,7 +147,7 @@
                     templates: {
                         header: '<h4>Users</h4><hr>',
                         suggestion: function(suggestion) {
-                            return suggestion._highlightResult.username.value;
+                            return suggestion._highlightResult.username.value + ' (' + suggestion._highlightResult.name.value + ')';
                         }
                     }
                 },
