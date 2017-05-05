@@ -100,6 +100,16 @@
 
             <div class="col-md-12">
                 <h3>Sponsors</h3>
+
+                <div class="row">
+                    @foreach($sponsors as $sponsor)
+                        <div class="col-md-2">
+                            <a href="{{ '/@' . $sponsor->username }}">
+                                <img src="{{ $sponsor->avatar }}" alt="{{ $sponsor->username }}" class="img img-circle" style="max-height: 50px;">
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>
