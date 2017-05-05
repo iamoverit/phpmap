@@ -178,7 +178,6 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         Laravel\Scout\ScoutServiceProvider::class,
         Spatie\Browsershot\BrowsershotServiceProvider::class,
-        SocialiteProviders\Manager\ServiceProvider::class,
         Lab404\Impersonate\ImpersonateServiceProvider::class,
         Spatie\ModelCleanup\ModelCleanupServiceProvider::class,
         Spatie\Activitylog\ActivitylogServiceProvider::class,
@@ -186,6 +185,9 @@ return [
         Spatie\Sitemap\SitemapServiceProvider::class,
         Spatie\Feed\FeedServiceProvider::class,
         Cog\Ban\Providers\BanServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        Laracademy\Commands\MakeServiceProvider::class,
+        Appstract\Opcache\OpcacheServiceProvider::class,
 
     ],
 
