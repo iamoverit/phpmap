@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Sites;
 
-use App\Http\Controllers\Controller;
 use App\User;
+use App\Http\Controllers\Controller;
 
 class SiteController extends Controller
 {
