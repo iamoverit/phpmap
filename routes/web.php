@@ -37,7 +37,7 @@ Route::post('auth/reauthenticate', 'Auth\LoginController@postReauthenticate');
 Route::impersonate();
 Route::feeds();
 
-Route::group(['prefix' => 'account'], function () {
+Route::group(['prefix' => '1account'], function () {
     Route::get('/', 'Users\AccountController@getAccount');
     Route::post('/update', 'Users\AccountController@updateAccount');
     Route::get('/delete', 'Users\AccountController@deleteAccount');

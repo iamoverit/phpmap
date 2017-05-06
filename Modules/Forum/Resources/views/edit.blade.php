@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('page_title')
-    Forums
+    Edit Account
 @endsection
 
 @section('styles')

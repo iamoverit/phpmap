@@ -24,7 +24,7 @@
 
         methods: {
             deleteAccount() {
-                axios.get('/account/delete/' + this.user.id).then(response => {
+                axios.delete('/account/delete/' + this.user.id).then(response => {
                     console.log(response.data);
                     window.location = "/";
                 });

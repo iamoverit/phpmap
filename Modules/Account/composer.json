@@ -1,0 +1,15 @@
+{
+    "name": "phpmap/account",
+    "description": "",
+    "authors": [
+        {
+            "name": "Florian Wartner",
+            "email": "f.wartner@phpmap.co"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\Account\\": ""
+        }
+    }
+}

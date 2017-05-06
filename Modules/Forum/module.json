@@ -1,7 +1,7 @@
 {
     "name": "Forum",
     "alias": "forum",
-    "description": "",
+    "description": "Forum Module for PHPMap",
     "keywords": ["forum", "phpmap", "laravel"],
     "active": 1,
     "order": 0,

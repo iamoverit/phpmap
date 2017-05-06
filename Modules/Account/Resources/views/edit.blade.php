@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('page_title')
-
+    Edit Account
 @endsection
 
 @section('styles')
@@ -13,7 +13,7 @@
 @endsection
 
 @section('content')
-    @yield('content')
+
 @endsection
 
 @section('footer_styles')

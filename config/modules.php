@@ -119,14 +119,14 @@ return [
     |--------------------------------------------------------------------------
     | Scan Path
     |--------------------------------------------------------------------------
-    |
+    |s
     | Here you define which folder will be scanned. By default will scan vendor
     | directory. This is useful if you host the package in packagist website.
     |
     */
 
     'scan' => [
-        'enabled' => false,
+        'enabled' => true,
         'paths' => [
             base_path('vendor/*/*'),
         ],
@@ -168,6 +168,6 @@ return [
     |--------------------------------------------------------------------------
     */
     'register' => [
-        'translations' => true,
+        'translations' => false,
     ],
 ];
