@@ -186,6 +186,7 @@ return [
         Spatie\Feed\FeedServiceProvider::class,
         Cog\Ban\Providers\BanServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
         Laracademy\Commands\MakeServiceProvider::class,
         Appstract\Opcache\OpcacheServiceProvider::class,
 
