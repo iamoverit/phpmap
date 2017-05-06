@@ -190,6 +190,7 @@ return [
         Laracademy\Commands\MakeServiceProvider::class,
         Appstract\Opcache\OpcacheServiceProvider::class,
         Mpociot\Teamwork\TeamworkServiceProvider::class,
+        Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,
 
     ],
 

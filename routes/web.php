@@ -31,6 +31,8 @@ Route::get('/auth/github', 'Auth\SocialController@redirectToGithub');
 Route::get('/auth/github/callback', 'Auth\SocialController@handleGithubCallback');
 
 Auth::routes();
+Route::get('auth/reauthenticate', 'Auth\LoginController@getReauthenticate');
+Route::post('auth/reauthenticate', 'Auth\LoginController@postReauthenticate');
 
 Route::impersonate();
 Route::feeds();
@@ -61,4 +63,12 @@ Route::group(['prefix' => 'teams', 'namespace' => 'Teamwork'], function()
     Route::delete('members/{id}/{user_id}', 'TeamMemberController@destroy')->name('teams.members.destroy');
 
     Route::get('accept/{token}', 'AuthController@acceptInvite')->name('teams.accept_invite');
+});
+
+Route::group(['middleware' => ['auth','reauthenticate']], function () {
+
+    Route::get('user/test', function () {
+        return 'Test';
+    });
+
 });
