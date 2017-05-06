@@ -62,11 +62,11 @@ class ForumServiceProvider extends ServiceProvider
         $sourcePath = __DIR__.'/../Resources/views';
 
         $this->publishes([
-            $sourcePath => $viewPath
+            $sourcePath => $viewPath,
         ]);
 
         $this->loadViewsFrom(array_merge(array_map(function ($path) {
-            return $path . '/modules/forum';
+            return $path.'/modules/forum';
         }, \Config::get('view.paths')), [$sourcePath]), 'forum');
     }
 
@@ -82,7 +82,7 @@ class ForumServiceProvider extends ServiceProvider
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, 'forum');
         } else {
-            $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', 'forum');
+            $this->loadTranslationsFrom(__DIR__.'/../Resources/lang', 'forum');
         }
     }
 

@@ -3,8 +3,6 @@
 namespace App\Listeners\Teams;
 
 use Mpociot\Teamwork\Events\UserInvitedToTeam;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
 class UserInvitedToTeamListener
 {

@@ -43,12 +43,10 @@ Route::group(['prefix' => 'account'], function () {
     Route::get('/delete', 'Users\AccountController@deleteAccount');
 });
 
-
-/**
+/*
  * Teamwork routes
  */
-Route::group(['prefix' => 'teams', 'namespace' => 'Teamwork'], function()
-{
+Route::group(['prefix' => 'teams', 'namespace' => 'Teamwork'], function () {
     Route::get('/', 'TeamController@index')->name('teams.index');
     Route::get('create', 'TeamController@create')->name('teams.create');
     Route::post('teams', 'TeamController@store')->name('teams.store');
@@ -65,10 +63,8 @@ Route::group(['prefix' => 'teams', 'namespace' => 'Teamwork'], function()
     Route::get('accept/{token}', 'AuthController@acceptInvite')->name('teams.accept_invite');
 });
 
-Route::group(['middleware' => ['auth','reauthenticate']], function () {
-
+Route::group(['middleware' => ['auth', 'reauthenticate']], function () {
     Route::get('user/test', function () {
         return 'Test';
     });
-
 });

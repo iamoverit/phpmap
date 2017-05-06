@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Teamwork;
 
 use Illuminate\Http\Request;
+use Mpociot\Teamwork\TeamInvite;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Mail;
 use Mpociot\Teamwork\Facades\Teamwork;
-use Mpociot\Teamwork\TeamInvite;
 
 class TeamMemberController extends Controller
 {
@@ -41,7 +41,7 @@ class TeamMemberController extends Controller
     {
         $teamModel = config('teamwork.team_model');
         $team = $teamModel::findOrFail($team_id);
-        if (!auth()->user()->isOwnerOfTeam($team)) {
+        if (! auth()->user()->isOwnerOfTeam($team)) {
             abort(403);
         }
 
@@ -66,10 +66,8 @@ class TeamMemberController extends Controller
         $teamModel = config('teamwork.team_model');
         $team = $teamModel::findOrFail($team_id);
 
-        if( !Teamwork::hasPendingInvite( $request->email, $team) )
-        {
-            Teamwork::inviteToTeam( $request->email, $team, function( $invite )
-            {
+        if (! Teamwork::hasPendingInvite($request->email, $team)) {
+            Teamwork::inviteToTeam($request->email, $team, function ($invite) {
                 Mail::send('teamwork.emails.invite', ['team' => $invite->team, 'invite' => $invite], function ($m) use ($invite) {
                     $m->to($invite->email)->subject('Invitation to join team '.$invite->team->name);
                 });
@@ -77,16 +75,16 @@ class TeamMemberController extends Controller
             });
         } else {
             return redirect()->back()->withErrors([
-                'email' => 'The email address is already invited to the team.'
+                'email' => 'The email address is already invited to the team.',
             ]);
         }
-        
+
         return redirect(route('teams.members.show', $team->id));
     }
 
     /**
      * Resend an invitation mail.
-     * 
+     *
      * @param $invite_id
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
@@ -99,5 +97,4 @@ class TeamMemberController extends Controller
 
         return redirect(route('teams.members.show', $invite->team));
     }
-
 }
