@@ -19,6 +19,11 @@ Vue.component('users', require('./components/Users.vue'));
 Vue.component('usergroups', require('./components/Usergroups.vue'));
 Vue.component('account', require('./components/Account.vue'));
 
+Vue.component('forum-flash', require('./components/Forum/Flash.vue'));
+Vue.component('forum-reply', require('./components/Forum/Reply.vue'));
+Vue.component('forum-favorite', require('./components/Forum/Favorite.vue'));
+
+
 const app = new Vue({
     el: '#app'
 });
