@@ -1,0 +1,15 @@
+{
+    "name": "phpmap/forum",
+    "description": "",
+    "authors": [
+        {
+            "name": "Florian Wartner",
+            "email": "f.wartner@phpmap.co"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\Forum\\": ""
+        }
+    }
+}

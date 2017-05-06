@@ -8,6 +8,7 @@
         "php": ">=5.6.4",
         "algolia/algoliasearch-client-php": "^1.16",
         "appstract/laravel-opcache": "^1.1",
+        "bosnadev/repositories": " 0.*",
         "cybercog/laravel-ban": "^2.1",
         "faustbrian/eloquent-presenter": "^3.1",
         "graham-campbell/markdown": "^7.1",
@@ -22,6 +23,7 @@
         "mpociot/laravel-apidoc-generator": "^2.0",
         "mpociot/reauthenticate": "dev-fix-laravel-54",
         "mpociot/teamwork": "^5.0",
+        "nwidart/laravel-modules": "^1.20",
         "pda/pheanstalk": "^3.1",
         "predis/predis": "^1.1",
         "pusher/pusher-php-server": "^2.6",
@@ -50,7 +52,8 @@
             "database"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Modules\\": "Modules/"
         }
     },
     "autoload-dev": {

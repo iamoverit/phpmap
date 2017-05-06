@@ -191,6 +191,7 @@ return [
         Appstract\Opcache\OpcacheServiceProvider::class,
         Mpociot\Teamwork\TeamworkServiceProvider::class,
         Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,
+        Nwidart\Modules\LaravelModulesServiceProvider::class,
 
     ],
 
@@ -245,6 +246,7 @@ return [
          * Package Aliases...
          */
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Module' => Nwidart\Modules\Facades\Module::class,
     ],
 
 ];

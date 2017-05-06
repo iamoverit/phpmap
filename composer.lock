@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "85f8e9ccdd156030529e6e1b060a0802",
+    "content-hash": "6ebda1816ba4b502b4ce0465807d02b4",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -210,6 +210,66 @@
                 "php"
             ],
             "time": "2017-04-06T08:58:51+00:00"
+        },
+        {
+            "name": "bosnadev/repositories",
+            "version": "0.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bosnadev/repository.git",
+                "reference": "3a289a137e27ac6b795852a0d72c509a51b70a26"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bosnadev/repository/zipball/3a289a137e27ac6b795852a0d72c509a51b70a26",
+                "reference": "3a289a137e27ac6b795852a0d72c509a51b70a26",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^5.2",
+                "illuminate/database": "^5.2",
+                "illuminate/filesystem": "^5.2",
+                "illuminate/support": "^5.2",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bosnadev\\": "src/Bosnadev/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maarten Paauw",
+                    "email": "maartenpaauw@gmail.com"
+                },
+                {
+                    "name": "Mirza Pasic",
+                    "email": "mirza@bosnadev.com"
+                }
+            ],
+            "description": "Laravel Repositories",
+            "homepage": "https://bosnadev.com",
+            "keywords": [
+                "database",
+                "eloquent",
+                "laravel",
+                "repositories",
+                "repository"
+            ],
+            "time": "2016-08-19T13:21:55+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -2759,6 +2819,59 @@
                 "php"
             ],
             "time": "2017-03-05T18:23:57+00:00"
+        },
+        {
+            "name": "nwidart/laravel-modules",
+            "version": "1.20.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nWidart/laravel-modules.git",
+                "reference": "c259422a0c8303d552324ce13c5dbd672468676c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nWidart/laravel-modules/zipball/c259422a0c8303d552324ce13c5dbd672468676c",
+                "reference": "c259422a0c8303d552324ce13c5dbd672468676c",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.1.*|5.2.*|5.3.*|5.4.*",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "mockery/mockery": "~0.9",
+                "orchestra/testbench": "^3.1|^3.2|^3.3|^3.4",
+                "phpro/grumphp": "^0.9.1",
+                "phpunit/phpunit": "~5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nwidart\\Modules\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Widart",
+                    "email": "n.widart@gmail.com",
+                    "homepage": "https://nicolaswidart.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel Module management",
+            "keywords": [
+                "laravel",
+                "module",
+                "modules",
+                "nwidart",
+                "rad"
+            ],
+            "time": "2017-04-19T13:47:31+00:00"
         },
         {
             "name": "paragonie/random_compat",
