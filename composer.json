@@ -42,7 +42,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/dbohn/reauthenticate"
+            "url": "https://github.com/fwartner/reauthenticate"
         }
     ],
     "autoload": {

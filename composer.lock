@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9685dc3ea6ce90956777d19ef83379b3",
+    "content-hash": "85f8e9ccdd156030529e6e1b060a0802",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -2428,12 +2428,12 @@
             "version": "dev-fix-laravel-54",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dbohn/reauthenticate.git",
+                "url": "https://github.com/fwartner/reauthenticate.git",
                 "reference": "59fb717d172588505b39d9bd8ff17ee2e1a739bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbohn/reauthenticate/zipball/59fb717d172588505b39d9bd8ff17ee2e1a739bc",
+                "url": "https://api.github.com/repos/fwartner/reauthenticate/zipball/59fb717d172588505b39d9bd8ff17ee2e1a739bc",
                 "reference": "59fb717d172588505b39d9bd8ff17ee2e1a739bc",
                 "shasum": ""
             },
