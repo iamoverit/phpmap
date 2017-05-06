@@ -1,5 +1,4 @@
 <?php
-
 namespace App;
 
 use App\Models\Forum\Favorite;
@@ -32,19 +31,39 @@ trait Favoritable
     }
 
     /**
+     * Unfavorite the current reply.
+     */
+    public function unfavorite()
+    {
+        $attributes = ['user_id' => auth()->id()];
+
+        $this->favorites()->where($attributes)->delete();
+    }
+
+    /**
      * Determine if the current reply has been favorited.
      *
-     * @return bool
+     * @return boolean
      */
     public function isFavorited()
     {
-        return (bool) $this->favorites->where('user_id', auth()->id())->count();
+        return !! $this->favorites->where('user_id', auth()->id())->count();
+    }
+
+    /**
+     * Fetch the favorited status as a property.
+     *
+     * @return bool
+     */
+    public function getIsFavoritedAttribute()
+    {
+        return $this->isFavorited();
     }
 
     /**
      * Get the number of favorites for the reply.
      *
-     * @return int
+     * @return integer
      */
     public function getFavoritesCountAttribute()
     {
