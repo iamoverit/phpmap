@@ -59,5 +59,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'forbid-banned-user' => \Cog\Ban\Http\Middleware\ForbidBannedUser::class,
+        'teamowner' => \Mpociot\Teamwork\Middleware\TeamOwner::class,
     ];
 }

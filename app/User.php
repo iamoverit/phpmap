@@ -14,10 +14,11 @@ use Illuminate\Notifications\Notifiable;
 use Lab404\Impersonate\Models\Impersonate;
 use Cog\Ban\Contracts\HasBans as HasBansContract;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Mpociot\Teamwork\Traits\UserHasTeams;
 
 class User extends Authenticatable implements HasBansContract
 {
-    use Searchable, Notifiable, HasApiTokens, Impersonate, HasInvites, Boardable, HasBans;
+    use Searchable, Notifiable, HasApiTokens, Impersonate, HasInvites, Boardable, HasBans, UserHasTeams;
 
     /**
      * The attributes that are mass assignable.

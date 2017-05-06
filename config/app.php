@@ -189,6 +189,7 @@ return [
         Laravel\Passport\PassportServiceProvider::class,
         Laracademy\Commands\MakeServiceProvider::class,
         Appstract\Opcache\OpcacheServiceProvider::class,
+        Mpociot\Teamwork\TeamworkServiceProvider::class,
 
     ],
 

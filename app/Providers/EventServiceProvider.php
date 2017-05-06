@@ -17,8 +17,14 @@ class EventServiceProvider extends ServiceProvider
 //            'App\Listeners\EventListener',
 //        ],
 
-        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
-            'SocialiteProviders\Twitter\TwitterExtendSocialite@handle',
+        \Mpociot\Teamwork\Events\UserJoinedTeam::class => [
+            'App\Listeners\Teams\UserJoinedTeamListener',
+        ],
+        \Mpociot\Teamwork\Events\UserLeftTeam::class => [
+            'App\Listeners\Teams\UserLeftTeamListener',
+        ],
+        \Mpociot\Teamwork\Events\UserInvitedToTeam::class => [
+            'App\Listeners\Teams\UserInvitedToTeamListener',
         ],
     ];
 
