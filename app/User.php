@@ -11,10 +11,10 @@ use App\Models\Forum\Activity;
 use App\Models\Resources\Snippet;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
+use Mpociot\Teamwork\Traits\UserHasTeams;
 use Lab404\Impersonate\Models\Impersonate;
 use Cog\Ban\Contracts\HasBans as HasBansContract;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Mpociot\Teamwork\Traits\UserHasTeams;
 
 class User extends Authenticatable implements HasBansContract
 {

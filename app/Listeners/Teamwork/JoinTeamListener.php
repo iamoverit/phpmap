@@ -2,7 +2,6 @@
 
 namespace App\Listeners\Teamwork;
 
-
 use Mpociot\Teamwork\Facades\Teamwork;
 
 class JoinTeamListener
