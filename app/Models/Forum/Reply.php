@@ -1,8 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models\Forum;
 
+use App\Traits\Favoritable;
 use App\Models\Forum\Thread;
+use App\RecordsActivity;
 use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model

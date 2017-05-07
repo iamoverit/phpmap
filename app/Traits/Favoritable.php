@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Traits;
 
 use App\Models\Forum\Favorite;
 use Illuminate\Database\Eloquent\Model;

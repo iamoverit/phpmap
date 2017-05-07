@@ -24,3 +24,36 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'affiliate_id' => str_random(10),
     ];
 });
+
+$factory->define(App\Models\Forum\Thread::class, function ($faker) {
+    return [
+        'user_id' => function () {
+            return factory('App\User')->create()->id;
+        },
+        'channel_id' => function () {
+            return factory('App\Models\Forum\Channel')->create()->id;
+        },
+        'title' => $faker->sentence,
+        'body'  => $faker->paragraph
+    ];
+});
+
+$factory->define(App\Models\Forum\Channel::class, function ($faker) {
+    $name = $faker->word;
+    return [
+        'name' => $name,
+        'slug' => $name
+    ];
+});
+
+$factory->define(App\Models\Forum\Reply::class, function ($faker) {
+    return [
+        'thread_id' => function () {
+            return factory('App\Models\Forum\Thread')->create()->id;
+        },
+        'user_id' => function () {
+            return factory('App\User')->create()->id;
+        },
+        'body'  => $faker->paragraph
+    ];
+});
