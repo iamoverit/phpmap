@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Forum;
 
 use App\Models\Forum\Reply;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class FavoritesController extends Controller

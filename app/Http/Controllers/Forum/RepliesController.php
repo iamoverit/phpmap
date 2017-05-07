@@ -20,7 +20,7 @@ class RepliesController extends Controller
     /**
      * Persist a new reply.
      *
-     * @param  integer $channelId
+     * @param  int $channelId
      * @param  Thread  $thread
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -30,7 +30,7 @@ class RepliesController extends Controller
 
         $thread->addReply([
             'body' => request('body'),
-            'user_id' => auth()->id()
+            'user_id' => auth()->id(),
         ]);
 
         return back()->with('flash', 'Your reply has been left.');
