@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Forum;
 
-use App\Filters\ThreadFilters;
-use App\Models\Forum\Channel;
 use App\Models\Forum\Thread;
 use Illuminate\Http\Request;
+use App\Models\Forum\Channel;
+use App\Filters\ThreadFilters;
 use App\Http\Controllers\Controller;
 
 class ThreadsController extends Controller
@@ -56,14 +56,14 @@ class ThreadsController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'body' => 'required',
-            'channel_id' => 'required|exists:channels,id'
+            'channel_id' => 'required|exists:channels,id',
         ]);
 
         $thread = Thread::create([
             'user_id' => auth()->id(),
             'channel_id' => request('channel_id'),
             'title' => request('title'),
-            'body' => request('body')
+            'body' => request('body'),
         ]);
 
         return redirect($thread->path())
@@ -73,7 +73,7 @@ class ThreadsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  integer     $channel
+     * @param  int     $channel
      * @param  \App\Thread $thread
      * @return \Illuminate\Http\Response
      */
@@ -81,7 +81,7 @@ class ThreadsController extends Controller
     {
         return view('forum.show', [
             'thread' => $thread,
-            'replies' => $thread->replies()->paginate(20)
+            'replies' => $thread->replies()->paginate(20),
         ]);
     }
 

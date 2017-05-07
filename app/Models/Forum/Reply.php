@@ -2,9 +2,8 @@
 
 namespace App\Models\Forum;
 
-use App\Traits\Favoritable;
-use App\Models\Forum\Thread;
 use App\RecordsActivity;
+use App\Traits\Favoritable;
 use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model
@@ -59,6 +58,6 @@ class Reply extends Model
      */
     public function path()
     {
-        return $this->thread->path() . "#reply-{$this->id}";
+        return $this->thread->path()."#reply-{$this->id}";
     }
 }
