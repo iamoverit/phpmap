@@ -8,7 +8,7 @@ use App\Models\Forum\Channel;
 use App\Filters\ThreadFilters;
 use App\Http\Controllers\Controller;
 
-class ThreadsController extends Controller
+class ThreadController extends Controller
 {
     /**
      * ThreadsController constructor.
