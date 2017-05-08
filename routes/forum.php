@@ -1,5 +1,6 @@
 <?php
 
+Route::get('/', 'Forum\ThreadController@index');
 Route::get('/threads', 'Forum\ThreadController@index');
 Route::get('/threads/create', 'Forum\ThreadController@create');
 Route::get('/threads/{channel}/{thread}', 'Forum\ThreadController@show');
