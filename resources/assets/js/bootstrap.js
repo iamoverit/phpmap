@@ -44,7 +44,8 @@ window.Pusher = require('pusher-js');
 
 window.Echo = new Echo({
     broadcaster: 'pusher',
-    key: '4dc9a34c3ba97f1d923c'
+    key: '4dc9a34c3ba97f1d923c',
+    cluster: 'mt1'
 });
 
 window.algoliasearch = require('algoliasearch');
