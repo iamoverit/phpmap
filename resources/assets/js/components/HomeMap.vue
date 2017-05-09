@@ -7,6 +7,8 @@
     var InfoBox = require('../extra/google_maps_infobox.js');
 
     export default {
+        props: ['allusers', 'allusergroups'],
+
         data() {
             return {
                 users: [],
@@ -19,7 +21,7 @@
 
         mounted() {
             this.mapInit();
-//            this.loadUserGroups();
+            this.loadUserGroups();
         },
 
         methods: {
@@ -44,7 +46,7 @@
             },
             createMap() {
                 axios.get('/api_public/users').then(response => {
-                    this.users = response.data;
+                    this.users = this.allusers;
                     var all = this.users;
                     var positions = [];
                     var markers = [];
@@ -186,15 +188,13 @@
             },
 
             loadUserGroups() {
-                axios.get('/api_public/usergroups').then(response => {
-                    let result = response.json();
+                let result = this.allusergroups;
                 if(typeof result.groups != 'undefined') {
                     this.usergroups = result.groups;
                     if(this.markerClusterer !== null) {
                         this.addUserGroupsToMap();
                     }
                 }
-            });
             }
         }
     }

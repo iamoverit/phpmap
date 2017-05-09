@@ -39,6 +39,6 @@ class AccountController extends Controller
 
         $user->delete();
 
-        return redirect()->back()->with('message', 'Your account has been updated!');
+        return redirect()->back()->with('message', 'Your account has been deleted!');
     }
 }

@@ -14,7 +14,7 @@
 
 @section('content')
     <div class="map-wrapper map-responsive">
-        <homemap></homemap>
+        <homemap :allusers="{{ $users }}" :allusergroups="{{ $usergroups }}"></homemap>
     </div>
 @endsection
 

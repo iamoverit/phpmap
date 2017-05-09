@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Sites;
 
+use App\Models\Meetups\Usergroup;
 use App\User;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,10 @@ class SiteController extends Controller
 
     public function getMap()
     {
-        return view('map');
+        $users = User::all();
+        $usergroups = Usergroup::all();
+
+        return view('map', compact('users', 'usergroups'));
     }
 
     public function getAbout()

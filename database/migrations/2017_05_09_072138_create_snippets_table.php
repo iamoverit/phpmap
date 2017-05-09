@@ -16,11 +16,12 @@ class CreateSnippetsTable extends Migration
         Schema::create('snippets', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->integer('user_id')->unsigned();
-            $table->string('name');
-            $table->longText('snippet');
+            $table->integer('user_id')->references('id')->on('users')->cascade('delete');
+            $table->integer('forked_id')->nullable();
+            $table->string('title');
+            $table->text('body');
+            $table->boolean('is_private')->default('0')->nullable();
 
-            $table->boolean('is_private')->default('0');
 
             $table->timestamps();
         });

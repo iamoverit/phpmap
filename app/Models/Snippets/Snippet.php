@@ -1,21 +1,18 @@
 <?php
 
-namespace App\Models\Resources;
+namespace App\Models\Snippets;
 
 use App\User;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Activitylog\Traits\LogsActivity;
 
 class Snippet extends Model
 {
-    use LogsActivity;
-
     protected $fillable = [
-        'name', 'user_id', 'snippet', 'is_private',
+        'title', 'body', 'user_id', 'forked_id', 'is_private'
     ];
 
     protected $casts = [
-        'is_private' => 'boolean',
+        'is_private' => 'boolean'
     ];
 
     public function user()

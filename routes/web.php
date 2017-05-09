@@ -18,6 +18,8 @@ Route::group(['middleware' => 'forbid-banned-user'], function () {
     Route::get('/ug/{slug}', 'Usergroups\UsergroupController@showGroup');
     Route::get('/usergroups', 'Usergroups\UsergroupController@getGroups');
     Route::get('/map', 'Sites\SiteController@getMap');
+
+    Route::resource('snippets', 'Snippets\SnippetsController');
 });
 
 Route::get('/', 'Sites\SiteController@index');
@@ -37,7 +39,7 @@ Route::post('auth/reauthenticate', 'Auth\LoginController@postReauthenticate');
 Route::impersonate();
 Route::feeds();
 
-Route::group(['prefix' => '1account'], function () {
+Route::group(['prefix' => 'account'], function () {
     Route::get('/', 'Users\AccountController@getAccount');
     Route::post('/update', 'Users\AccountController@updateAccount');
     Route::get('/delete', 'Users\AccountController@deleteAccount');
