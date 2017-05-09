@@ -22,7 +22,6 @@ class CreateSnippetsTable extends Migration
             $table->text('body');
             $table->boolean('is_private')->default('0')->nullable();
 
-
             $table->timestamps();
         });
     }

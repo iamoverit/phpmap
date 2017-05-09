@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Snippets;
 
-use App\Models\Snippets\Snippet;
 use Illuminate\Http\Request;
+use App\Models\Snippets\Snippet;
 use App\Http\Controllers\Controller;
 
 class SnippetsController extends Controller
