@@ -8,7 +8,6 @@ use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
-
     private $sentryID;
 
     /**
@@ -25,21 +24,21 @@ class Handler extends ExceptionHandler
         \Illuminate\Validation\ValidationException::class,
     ];
 
-    /**
-     * Report or log an exception.
-     *
-     * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
-     *
-     * @param  \Exception  $exception
-     * @return void
-     */
+   /**
+    * Report or log an exception.
+    *
+    * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
+    *
+    * @param  \Exception  $exception
+    * @return void
+    */
    public function report(Exception $e)
-    {
-        if ($this->shouldReport($e)) {
-            $this->sentryID = app('sentry')->captureException($e);
-        }
-        parent::report($e);
-    }
+   {
+       if ($this->shouldReport($e)) {
+           $this->sentryID = app('sentry')->captureException($e);
+       }
+       parent::report($e);
+   }
 
     /**
      * Render an exception into an HTTP response.
