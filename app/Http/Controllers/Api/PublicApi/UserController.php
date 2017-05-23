@@ -16,7 +16,7 @@ class UserController extends Controller
 
     public function getLatest()
     {
-        $users = User::latest()->take(4);
+        $users = User::latest()->get()->take(4);
 
         return response()->json($users);
     }
