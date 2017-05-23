@@ -191,6 +191,7 @@ return [
         Appstract\Opcache\OpcacheServiceProvider::class,
         Mpociot\Teamwork\TeamworkServiceProvider::class,
         Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,
+        Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
 
     ],
 
@@ -245,6 +246,7 @@ return [
          * Package Aliases...
          */
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Sentry' => Sentry\SentryLaravel\SentryFacade::class,
     ],
 
 ];
