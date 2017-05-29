@@ -63,7 +63,7 @@ class SocialController extends Controller
 
         return User::create([
             'name' => $githubUser->name,
-            'username' => $githubUser->nickname,
+            'username' => str_slug($githubUser->nickname, '_'),
             'email' => $githubUser->email,
             'github_id' => $githubUser->id,
             'github_url' => 'https://github.com/'.$githubUser->nickname,
