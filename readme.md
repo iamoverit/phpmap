@@ -38,9 +38,7 @@ If you would like to support this project, feel free to donate.
 
 [![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/PHPMap/)
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/56PVTMQwwLE1eNFhmArVx3xr/PHPMap/phpmap'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/56PVTMQwwLE1eNFhmArVx3xr/PHPMap/phpmap.svg' />
-</a>
+
 
 ## License
 
